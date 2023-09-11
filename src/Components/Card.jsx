@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
-import { ContextGlobal } from "../utils/global.context"
-import { handleFavorites } from "../utils/handleFavorites"
+import { ContextGlobal } from "./utils/global.context"
+import { handleFavorites } from "./utils/handleFavorites"
 
 const Card = ({ name, username, id, theme }) => {
   const { state, dispatch } = useContext(ContextGlobal);
