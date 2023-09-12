@@ -3,21 +3,26 @@ import { Link } from "react-router-dom"
 import { ContextGlobal } from "./utils/global.context"
 import { handleFavorites } from "./utils/handleFavorites"
 
-const Card = ({ name, username, id, theme }) => {
-  const { state, dispatch } = useContext(ContextGlobal);
-  const { data: favorites } = state;
-  const isFavorite = favorites.some((favorite) => favorite.id === id);
+const Card = ({ name, username, id, theme,email, website }) => {
+  const { state, dispatch } = useContext(ContextGlobal)
+  const { favorites } = state
+  const isFavorite = favorites.forEach(e =>
+    console.log("eee",e)
+    );
 
   const toggleFavorite = () => {
-    handleFavorites(id, name, username, favorites, dispatch)
+    handleFavorites(id, name, username, email, website, isFavorite, favorites, dispatch)
   }
 
   return (
     <div className={`card ${theme}`}>
       <h3>{name}</h3>
-      <p>@{username}</p>
+      <p>{username}</p>
+      <p>@{email}</p>
+      <p>{website}</p>
       <button onClick={toggleFavorite} className="favButton">
-        {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        {/* {isFavorite ? "-" : "+"} */}
+        +
       </button>
       <Link to={`/dentist/${id}`} className="detailLink">
         View Details

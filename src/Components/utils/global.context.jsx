@@ -3,11 +3,13 @@ import { createContext, useMemo, useReducer } from "react"
 const actions = {
   CAMBIAR_TEMA: "CAMBIAR_TEMA",
   ACTUALIZAR_DATOS_API: "ACTUALIZAR_DATOS_API",
+  ACTUALIZAR_DATOS_STORAGE: "ACTUALIZAR_DATOS_STORAGE",
 }
 
 const initialState = {
   theme: "claro",
   data: [],
+  favorites:[]
 }
 
 const globalReducer = (state, action) => {
@@ -21,6 +23,11 @@ const globalReducer = (state, action) => {
       return {
         ...state,
         data: action.payload,
+      };
+    case actions.ACTUALIZAR_DATOS_STORAGE:
+      return {
+        ...state,
+        favorites: action.payload,
       };
     default:
       return state

@@ -1,15 +1,15 @@
-export const handleFavorites = (id, name, username, favorites, dispatch) => {
-  const isFavorite = favorites.some((favorite) => favorite.id === id)
-
+export const handleFavorites = (id, name, username, email, website, isFavorite, favorites, dispatch) => {
+  console.log(favorites)
+  console.log(isFavorite);
   if (isFavorite) {
     return
   }
 
-  const newFavorite = { id, name, username }
+  const newFavorite = { id, name, username, email, website }
   const updatedFavorites = [...favorites, newFavorite]
 
   dispatch({
-    type: "ACTUALIZAR_DATOS_API",
+    type: "ACTUALIZAR_DATOS_STORAGE",
     payload: updatedFavorites,
   })
 
