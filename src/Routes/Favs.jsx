@@ -3,7 +3,7 @@ import Card from "../Components/Card"
 
 const Favs = ({themeClass}) => {
 
-  const data = JSON.parse(localStorage.getItem("favorites"))
+  const data = JSON.parse(localStorage.getItem("favorites")) || []
 
   return (
     <div className={themeClass}>

@@ -19,6 +19,9 @@ code {
   width: 100%;
   cursor: pointer;
 }
+.btn{
+  border: none;
+}
 
 h1{
   text-align: center;
@@ -26,14 +29,34 @@ h1{
 
 nav{
   display: flex;
-  width: 100%;
-  justify-content: flex-start;
+  width: 90%;
+  justify-content: space-between;
   padding: 1rem;
 }
 
 nav > img {
   width: 200px;
   margin: 0;
+}
+
+nav > a{
+  align-self: center;
+  justify-self: center;
+}
+
+.linksContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 a{
@@ -53,7 +76,7 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 90%;
   height: 40px;
   margin-top: 2rem;
 }
@@ -94,28 +117,10 @@ form{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
+  width: 90%;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  display: table;
-  border: 1px solid #ccc;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
 }
 
 .claro{

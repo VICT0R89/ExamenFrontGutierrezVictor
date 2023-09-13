@@ -13,10 +13,12 @@ const Navbar = () => {
   return (
     <nav className={state.theme}>
       <img src="/images/DH.png" alt="logo" />
-      <Link to="/">Home</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/favs">Favs</Link>
-      <button onClick={toggleTheme}  className={state.theme}>Change theme</button>
+      <div className='linksContainer'>
+        <Link to="/">Home</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/favs">Favs</Link>
+      </div>
+      <button onClick={toggleTheme}  className={`btn ${state.theme}`}>Change theme</button>
     </nav>
   )
 }

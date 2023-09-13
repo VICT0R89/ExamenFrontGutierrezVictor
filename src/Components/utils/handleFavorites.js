@@ -1,11 +1,13 @@
 export const handleFavorites = (id, name, username, email, website, isFavorite, favorites, dispatch) => {
   
-  if (isFavorite) {
-    return
-  }
+  let updatedFavorites
 
-  const newFavorite = { id, name, username, email, website }
-  const updatedFavorites = [...favorites, newFavorite]
+  if (isFavorite) {
+    updatedFavorites = favorites.filter(fav => fav.id !== id)
+  } else {
+    const newFavorite = { id, name, username, email, website }
+    updatedFavorites = [...favorites, newFavorite]
+  }
 
   localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
   

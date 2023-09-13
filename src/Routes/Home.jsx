@@ -6,22 +6,10 @@ const Home = () => {
 
   const { state,dispatch } = useContext(ContextGlobal)
   const { data, theme } = state
-  const themeClass = theme === 'claro' ? 'claro' : 'oscuro'
-
-  /* const setData = () =>{
-    const apiUrl = `https://jsonplaceholder.typicode.com/users`
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch({ type: 'ACTUALIZAR_DATOS_API', payload: data })
-      })
-      .catch((error) => {
-        console.error('Error fetching dentist details:', error)
-      })
-  } */
   
   useEffect(()=>{
     const apiUrl = `https://jsonplaceholder.typicode.com/users`
+    console.log("renderizando con effect en home")
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -30,10 +18,10 @@ const Home = () => {
       .catch((error) => {
         console.error('Error fetching dentist details:', error)
       })
-  })
+  }, [])
 
   return (
-    <main className={themeClass}>
+    <main className={theme}>
       <h1>Home</h1>
       <div className="card-grid">
         {data.map((dentist) => {
@@ -46,7 +34,7 @@ const Home = () => {
               username={username}
               website={website}
               email={email}
-              theme={themeClass}
+              theme={theme}
             />
           )
         })}
