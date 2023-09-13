@@ -18,7 +18,11 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>
         <Link to="/favs">Favs</Link>
       </div>
-      <button onClick={toggleTheme}  className={`h-btn ${state.theme}`}>Change theme</button>
+      {state.theme === 'claro' ?
+      <button onClick={toggleTheme}  className={`h-btn ${state.theme}`}>&#x1F319;</button>
+      :
+      <button onClick={toggleTheme}  className={`h-btn ${state.theme}`}>&#x2600;</button>
+    }
     </nav>
   )
 }

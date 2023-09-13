@@ -9,7 +9,6 @@ const Home = () => {
   
   useEffect(()=>{
     const apiUrl = `https://jsonplaceholder.typicode.com/users`
-    console.log("renderizando con effect en home")
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
