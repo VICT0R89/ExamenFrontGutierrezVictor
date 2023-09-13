@@ -8,7 +8,7 @@ const Home = () => {
   const { data, theme } = state
   const themeClass = theme === 'claro' ? 'claro' : 'oscuro'
 
-  const setData = () =>{
+  /* const setData = () =>{
     const apiUrl = `https://jsonplaceholder.typicode.com/users`
     fetch(apiUrl)
       .then((response) => response.json())
@@ -18,10 +18,19 @@ const Home = () => {
       .catch((error) => {
         console.error('Error fetching dentist details:', error)
       })
-  }
+  } */
+  
   useEffect(()=>{
-    setData()
-  },[""])
+    const apiUrl = `https://jsonplaceholder.typicode.com/users`
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch({ type: 'ACTUALIZAR_DATOS_API', payload: data })
+      })
+      .catch((error) => {
+        console.error('Error fetching dentist details:', error)
+      })
+  })
 
   return (
     <main className={themeClass}>

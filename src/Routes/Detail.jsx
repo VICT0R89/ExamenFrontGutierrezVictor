@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Card from '../Components/Card'
 
 const Detail = ({ theme }) => {
   const { id } = useParams()
@@ -22,12 +23,15 @@ const Detail = ({ theme }) => {
     <div className={`detail ${theme}`}>
       <h1>Dentist Details</h1>
       {dentist ? (
-        <div className="dentist-details">
-          <h2>{dentist.name}</h2>
-          <p>Email: {dentist.email}</p>
-          <p>Phone: {dentist.phone}</p>
-          <p>Website: {dentist.website}</p>
-        </div>
+        <Card
+        key={dentist.id}
+        id={dentist.id}
+        name={dentist.name}
+        username={dentist.username}
+        website={dentist.website}
+        email={dentist.email}
+        theme={theme}
+      />
       ) : (
         <p>Loading...</p>
       )}

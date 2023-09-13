@@ -6,9 +6,7 @@ import { handleFavorites } from "./utils/handleFavorites"
 const Card = ({ name, username, id, theme,email, website }) => {
   const { state, dispatch } = useContext(ContextGlobal)
   const { favorites } = state
-  const isFavorite = favorites.forEach(e =>
-    console.log("eee",e)
-    );
+  const isFavorite = favorites.some((e)=>e.id === id)
 
   const toggleFavorite = () => {
     handleFavorites(id, name, username, email, website, isFavorite, favorites, dispatch)
@@ -18,11 +16,10 @@ const Card = ({ name, username, id, theme,email, website }) => {
     <div className={`card ${theme}`}>
       <h3>{name}</h3>
       <p>{username}</p>
-      <p>@{email}</p>
+      <p>{email}</p>
       <p>{website}</p>
       <button onClick={toggleFavorite} className="favButton">
-        {/* {isFavorite ? "-" : "+"} */}
-        +
+        {isFavorite ? "-" : "+"}
       </button>
       <Link to={`/dentist/${id}`} className="detailLink">
         View Details

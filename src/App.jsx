@@ -6,7 +6,7 @@ import Favs from "./Routes/Favs"
 import Contact from "./Routes/Contact"
 import { useContext } from 'react'
 import  { ContextGlobal } from './Components/utils/global.context'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Navbar/>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/dentist/:id" element={<Detail />} />
+              <Route path="/dentist/:id" element={<Detail theme = {state.theme} />} />
               <Route path="/favs" element={<Favs />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
