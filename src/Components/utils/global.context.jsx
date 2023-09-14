@@ -18,21 +18,21 @@ const globalReducer = (state, action) => {
       return {
         ...state,
         theme: action.payload,
-      };
+      }
     case actions.ACTUALIZAR_DATOS_API:
       return {
         ...state,
         data: action.payload,
-      };
+      }
     case actions.ACTUALIZAR_DATOS_STORAGE:
       return {
         ...state,
         favorites: action.payload,
-      };
+      }
     default:
       return state
   }
-};
+}
 
 export const ContextGlobal = createContext(undefined)
 

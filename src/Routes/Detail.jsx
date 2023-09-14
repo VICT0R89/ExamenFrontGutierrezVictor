@@ -12,7 +12,6 @@ const Detail = ({ theme }) => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setDentist(data)
       })
       .catch((error) => {
@@ -34,10 +33,10 @@ const Detail = ({ theme }) => {
         theme={theme}
       />
       ) : (
-        <p>Loading...</p>
+        <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default Detail

@@ -25,7 +25,7 @@ const Favs = ({themeClass}) => {
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Favs;
+export default Favs

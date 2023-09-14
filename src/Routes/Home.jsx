@@ -22,22 +22,26 @@ const Home = () => {
   return (
     <main className={theme}>
       <h1>Home</h1>
-      <div className="card-grid">
-        {data.map((dentist) => {
-          let {id, name, username, website, email } = dentist
-          return (
-            <Card
-              key={id}
-              id={id}
-              name={name}
-              username={username}
-              website={website}
-              email={email}
-              theme={theme}
-            />
-          )
-        })}
-      </div>
+      {data.length > 0 ? 
+        <div className="card-grid">
+          {data.map((dentist) => {
+            let {id, name, username, website, email } = dentist
+            return (
+              <Card
+                key={id}
+                id={id}
+                name={name}
+                username={username}
+                website={website}
+                email={email}
+                theme={theme}
+              />
+            )
+          })}
+        </div> 
+        :
+        <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+      }
     </main>
   )
 }

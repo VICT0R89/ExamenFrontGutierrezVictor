@@ -1,5 +1,5 @@
-import React from 'react';
-import Form from '../Components/Form';
+import React from 'react'
+import Form from '../Components/Form'
 
 const Contact = ({ theme }) => {
   return (
@@ -8,7 +8,7 @@ const Contact = ({ theme }) => {
       <p>Send us your questions and we will contact you</p>
       <Form />
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
