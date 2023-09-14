@@ -19,7 +19,7 @@ const Card = ({ name, username, id, theme,email, website }) => {
       <p>{email}</p>
       <p>{website}</p>
       <button onClick={toggleFavorite} className="favButton">
-        {isFavorite ? "-" : "+"}
+        {isFavorite ? <span className="add">&#10084;</span> : <span className="remove">&#128156;</span> }
       </button>
       <Link to={`/dentist/${id}`} className="detailLink">
         View Details
