@@ -6,7 +6,7 @@ const Favs = ({themeClass}) => {
   const data = JSON.parse(localStorage.getItem("favorites")) || []
 
   return (
-    <div className={themeClass}>
+    <div className={`fav ${themeClass}`}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
       {data.map((dentist) => {

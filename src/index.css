@@ -35,6 +35,15 @@ li {
   list-style: none;
 }
 
+img {
+  max-width: 200px;
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+
 .App{
   padding: 25px;
   background-color: var(--secundary-color);
@@ -69,17 +78,25 @@ code {
   background-color: var(--secundary-color);
   color: var(--primary-color);
 }
+
 #f-header:hover {
   transition: 0.2s ease-out;
   border-bottom: 2px solid  var(--amarillo-p-color);
   color: var(--azul-color);
 }
+
 #f-header .linksContainer {
   cursor: pointer;
-  padding: 0 0.6vw 0 0.6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
 }
+
 #f-header .linksContainer a {
   text-align: center;
+  align-self: center;
+  justify-self: center;
   padding: 0.6vw;
   margin: 0 10px;
   min-width: 120px;
@@ -87,11 +104,13 @@ code {
   background-color: var(--secundary-color);
   color: var(--primary-color);
 }
+
 #f-header .linksContainer a:hover {
   transition: 0.2s ease-out;
   border-bottom: 4px solid  var(--amarillo-p-color);
   color: var(--azul-color);
 }
+
 #f-header .h-btn {
   display: flex;
   justify-content: center;
@@ -109,27 +128,11 @@ code {
   font-size: 1.4vw;
   cursor: pointer;
 }
+
 #f-header .h-btn:hover {
   transition: 0.6s ease;
   background-color: var(--azul-color);
   color: var(--amarillo-p-color);
-}
-
-nav > img {
-  width: 200px;
-  margin: 0;
-}
-
-nav > a{
-  align-self: center;
-  justify-self: center;
-}
-
-.linksContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 10px;
 }
 
 
@@ -138,92 +141,72 @@ nav > a{
 main{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-a{
-  color: #000;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
-}
-a:hover{
-  color: var(--gris-color);
-} 
-
-/* FOOTER ----------------------------------- */
-
-footer {
-  display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
+  align-items: center;
   width: 100%;
-  height: 40px;
-  margin-top: 2rem;
+  padding: 10px;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+main > h1 {
+  text-align: center;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  padding: 10px 0;
 }
 
-/* FORM ---------------------------------- */
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
-
+.card-grid{
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  }
 
 /* CARD --------------------------------- */
 
 .card{
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem;
+  width: 220px;
+  height: 340px;
+  padding: 10px;
   transition: 0.6s ease-in-out;
   border: 2px solid var(--azul-color);
-  background-color: var(--card-p-color) !important;
+  background-color: var(--card-p-color);
 }
 
 .card:hover{
   transition: 0.6s ease-in-out;
   color: var(--gris-color);
   border: 2px solid var(--amarillo-p-color);
-  background-color: var(--azul-claro-color) !important;
+  background-color: var(--azul-claro-color);
 }
 
-.card-grid{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 100%;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
+.card > h3{
+  text-align: center;
+  font-size: 15px;
+  text-decoration: underline;
 }
+
+.card > p{
+  text-align: center;
+  font-size: 14px;
+}
+
 .detailLink{
   transition: .6s ease-in-out;
+  text-decoration: none;
+  color: var(--amarillo-p-color);
 }
+
 .detailLink:hover{
   transition: .6s ease-in-out;
-  color: var(--amarillo-p-color);
+  color: var(--card-p-color);
 }
 
 .favButton{
@@ -251,3 +234,174 @@ form{
   color:  var(--amarillo-p-color);
   border: 2px solid var(--amarillo-p-color);
 }
+
+/* DETAILS ---------------------------------- */
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+
+.detail > h1 {
+  text-align: center;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  padding: 10px 0;
+}
+
+/* LOADER ----------------------------------- */
+
+/* FAVORITOS -------------------------------- */
+
+.fav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+
+.fav > h1 {
+  text-align: center;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  padding: 10px 0;
+}
+
+/* CONTACTO --------------------------------- */
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  width: 100%;
+  padding: 20px;
+}
+
+.contact > h2{
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact > p{
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* FORMULARIO ------------------------------- */
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  padding: 20px 25px;
+  border: 10px solid var(--amarillo-p-color);
+}
+
+.formContainer > h2{
+  text-align: center;
+  padding: 10px 0;
+}
+.formContainer > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.form-group > label {
+  align-self: flex-start;
+  padding: 10px 5px;
+}
+
+.form-group > input {
+  padding: 10px;
+  border: 1px solid var(--card-p-color);
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+.form-group > input:focus{
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--amarillo-p-color);
+}
+
+.formContainer > form > .h-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s ease-in-out;
+  background-color:  var(--amarillo-p-color);
+  padding: 10px;
+  color: var(--azul-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formContainer > form > .h-btn:hover {
+  transition: 0.6s ease;
+  background-color: var(--azul-color);
+  color: var(--amarillo-p-color);
+}
+
+.error{
+  color: red;
+  font-size: 10px;
+  padding-top: 10px;  
+}
+.success{
+  color: green;
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+/* FOOTER ----------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: 2rem;
+}
+
+footer > img{
+  width: 200px;
+  margin: 0;
+}
+footer > p{
+  margin: 0;
+  padding-top: 0.7rem;
+}
+
+/* FORM ---------------------------------- */
+

@@ -12,6 +12,7 @@ const Home = () => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         dispatch({ type: 'ACTUALIZAR_DATOS_API', payload: data })
       })
       .catch((error) => {
