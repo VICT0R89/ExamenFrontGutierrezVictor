@@ -59,7 +59,7 @@ const Form = () => {
   return (
     <div className="formContainer">
       <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="form-group">
           <label htmlFor="fullName">Full Name</label>
           <input
