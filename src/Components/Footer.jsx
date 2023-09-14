@@ -12,10 +12,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-/* 
-, { useContext }
-import  { ContextGlobal } from './utils/global.context'
-const { state } = useContext(ContextGlobal)
-className={state.theme}
-*/

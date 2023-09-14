@@ -1,3 +1,4 @@
+/* CAMBIO DE COLORES PARA TEMAS CLARO/OSCURO */
 
 .claro{
   --primary-color: #0B0A0A;
@@ -12,11 +13,13 @@
   --primary-color: #e2e2e2;
   --secundary-color: #0B0A0A;
   --gris-color: #d6d5d5;
-  --amarillo-p-color: #FBD214;
-  --card-p-color: #f5fb7f;
-  --azul-color: #022144;
-  --azul-claro-color: #013570;
+  --amarillo-p-color: #f5fb7f;
+  --card-p-color: #FBD214;
+  --azul-color: #013570;
+  --azul-claro-color: #022144;
 }
+
+/* ESTILOS GENERALES DE CONFIGURACIÓN ---------- */
 
 *{
   padding: 0;
@@ -24,11 +27,23 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 .App{
   padding: 25px;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
 }
 
 body {
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -41,15 +56,63 @@ code {
     monospace;
 }
 
-h1{
-  text-align: center;
-}
+/* NAVBAR ------------------------------ */
 
-nav{
+#f-header {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 1.5vw;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+#f-header:hover {
+  transition: 0.2s ease-out;
+  border-bottom: 2px solid  var(--amarillo-p-color);
+  color: var(--azul-color);
+}
+#f-header .linksContainer {
+  cursor: pointer;
+  padding: 0 0.6vw 0 0.6vw;
+}
+#f-header .linksContainer a {
+  text-align: center;
+  padding: 0.6vw;
+  margin: 0 10px;
+  min-width: 120px;
+  max-width: 120px;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+#f-header .linksContainer a:hover {
+  transition: 0.2s ease-out;
+  border-bottom: 4px solid  var(--amarillo-p-color);
+  color: var(--azul-color);
+}
+#f-header .h-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s ease-in-out;
+  background-color:  var(--amarillo-p-color);
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--azul-color);
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+#f-header .h-btn:hover {
+  transition: 0.6s ease;
+  background-color: var(--azul-color);
+  color: var(--amarillo-p-color);
 }
 
 nav > img {
@@ -69,6 +132,9 @@ nav > a{
   padding: 5px 10px;
 }
 
+
+/* MAIN ----------------------------- */
+
 main{
   display: flex;
   flex-direction: column;
@@ -84,8 +150,10 @@ a{
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: var(--gris-color);
 } 
+
+/* FOOTER ----------------------------------- */
 
 footer {
   display: flex;
@@ -108,6 +176,8 @@ footer > p{
   padding-top: 0.7rem;
 }
 
+/* FORM ---------------------------------- */
+
 form{
   display: flex;
   flex-direction: column;
@@ -116,6 +186,9 @@ form{
   height: 100px;
   margin: 0 auto;
 }
+
+
+/* CARD --------------------------------- */
 
 .card{
   display: flex;
@@ -150,78 +223,6 @@ form{
 }
 .detailLink:hover{
   transition: .6s ease-in-out;
-  color: var(--amarillo-p-color);
-}
-
-/* .claro{
-  background-color: var(--secundary-color);
-  color: var(--primary-color);
-}
-
-.claro > a {
-  color: var(--primary-color);
-}
-
-.oscuro{
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
-}
-
-.oscuro > a {
-  color: var(--secundary-color);
-} */
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-#f-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 4vw;
-  font-size: 1.5vw;
-}
-#f-header .linksContainer {
-  cursor: pointer;
-  padding: 0 0.6vw 0 0.6vw;
-}
-#f-header .linksContainer a {
-  text-align: center;
-  padding: 0.6vw;
-  margin: 0 10px;
-  min-width: 120px;
-  max-width: 120px;
-}
-#f-header .linksContainer a:hover {
-  transition: 0.2s ease-out;
-  border-bottom: 4px solid  var(--amarillo-p-color);
-  color: var(--azul-color);
-}
-#f-header .h-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.6s ease-in-out;
-  background-color:  var(--amarillo-p-color);
-  min-width: 40px;
-  max-width: 40px;
-  min-height: 40px;
-  max-height: 40px;
-  padding: 20px;
-  border-radius: 50%;
-  font-size: 1rem;
-  color: var(--azul-color);
-  font-size: 1.4vw;
-  cursor: pointer;
-}
-#f-header .h-btn:hover {
-  transition: 0.6s ease;
-  background-color: var(--azul-color);
   color: var(--amarillo-p-color);
 }
 

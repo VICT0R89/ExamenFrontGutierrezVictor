@@ -7,7 +7,7 @@ const actions = {
 }
 
 const initialState = {
-  theme: "claro",
+  theme: 'claro',
   data: [],
   favorites:[]
 }
