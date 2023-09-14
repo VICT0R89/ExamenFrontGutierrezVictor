@@ -50,6 +50,9 @@ const Form = () => {
       setErrors({})
       setSuccessMessage(`Gracias ${fullName}, te contactaremos lo antes posible vía email.`)
       console.log('Datos enviados:', formData)
+      setTimeout(()=>{
+        setSuccessMessage('')
+      },2000)
     } else {
       setSuccessMessage('')
       console.log('Formulario contiene errores. No se pudo enviar.')

@@ -12,6 +12,7 @@ const Detail = ({ theme }) => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setDentist(data)
       })
       .catch((error) => {
@@ -27,7 +28,7 @@ const Detail = ({ theme }) => {
         key={dentist.id}
         id={dentist.id}
         name={dentist.name}
-        username={dentist.username}
+        username={dentist.phone}
         website={dentist.website}
         email={dentist.email}
         theme={theme}
