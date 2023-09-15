@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ExamenFrontGutierrezVictor/static/css/main.14878dee.css",
+    "main.js": "/ExamenFrontGutierrezVictor/static/js/main.60eb24af.js",
+    "index.html": "/ExamenFrontGutierrezVictor/index.html",
+    "main.14878dee.css.map": "/ExamenFrontGutierrezVictor/static/css/main.14878dee.css.map",
+    "main.60eb24af.js.map": "/ExamenFrontGutierrezVictor/static/js/main.60eb24af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14878dee.css",
+    "static/js/main.60eb24af.js"
+  ]
+}
