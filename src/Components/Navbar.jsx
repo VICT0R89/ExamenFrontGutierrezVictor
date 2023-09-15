@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav id='f-header' className={state.theme}>
-      <img src="/images/DH.png" alt="logo" />
+      <img src="ExamenFrontGutierrezVictor/images/DH.png" alt="logo" />
       <div className='linksContainer'>
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>

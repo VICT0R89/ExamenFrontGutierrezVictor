@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <>
     <ContextProvider>
-      <Router>
+      <Router basename='/ExamenFrontGutierrezVictor'>
         <App />
       </Router>
     </ContextProvider>
