@@ -9,7 +9,7 @@ const Footer = () => {
         <p>Powered by</p>
         <p>VÍCTOR GUTIÉRREZ</p>
       </div>
-        <img src="ExamenFrontGutierrezVictor/images/DH.png" alt='DH-logo' />
+        <img src="/ExamenFrontGutierrezVictor/images/DH.png" alt='DH-logo' />
     </footer>
   )
 }
