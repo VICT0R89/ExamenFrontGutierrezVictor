@@ -2,19 +2,19 @@
 
 .claro{
   --primary-color: #0B0A0A;
-  --secundary-color: #e2e2e2;
-  --gris-color: #d6d5d5;
-  --amarillo-p-color: #FBD214;
-  --card-p-color: #f5fb7f;
+  --secundary-color: #d3b5b5;
+  --gris-color: #c5c5c5;
+  --amarillo-p-color: #d6df5b;
+  --card-p-color: #f9ff86;
   --azul-color: #043670;
   --azul-claro-color: #045199;
 }
 .oscuro{
-  --primary-color: #e2e2e2;
+  --primary-color: #d3b5b5;
   --secundary-color: #0B0A0A;
-  --gris-color: #d6d5d5;
-  --amarillo-p-color: #f5fb7f;
-  --card-p-color: #FBD214;
+  --gris-color: #c5c5c5;
+  --amarillo-p-color: #f9ff86;
+  --card-p-color: #d6df5b;
   --azul-color: #045199;
   --azul-claro-color: #043670;
 }
@@ -50,6 +50,7 @@ img {
   color: var(--primary-color);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -73,8 +74,6 @@ code {
 /* NAVBAR ------------------------------ */
 
 #f-header {
-  position: fixed;
-  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -428,7 +427,6 @@ main > h1 {
 /* FOOTER ----------------------------------- */
 
 footer {
-  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
