@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ExamenFrontGutierrezVictor/static/css/main.14878dee.css",
+    "main.css": "/ExamenFrontGutierrezVictor/static/css/main.39ad4edc.css",
     "main.js": "/ExamenFrontGutierrezVictor/static/js/main.f923b2cf.js",
     "index.html": "/ExamenFrontGutierrezVictor/index.html",
-    "main.14878dee.css.map": "/ExamenFrontGutierrezVictor/static/css/main.14878dee.css.map",
+    "main.39ad4edc.css.map": "/ExamenFrontGutierrezVictor/static/css/main.39ad4edc.css.map",
     "main.f923b2cf.js.map": "/ExamenFrontGutierrezVictor/static/js/main.f923b2cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.14878dee.css",
+    "static/css/main.39ad4edc.css",
     "static/js/main.f923b2cf.js"
   ]
 }
